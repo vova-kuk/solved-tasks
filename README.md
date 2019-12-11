@@ -1,5 +1,11 @@
 # solved-tasks
-* task 1
+#### Filter the number
 ```javascript
-const a = 123;
+var FilterString = function(v) {
+  let c = '';
+  for (let i = 0; i < v.length; i++){
+    if (!isNaN(v[i])) c += v[i];
+  }
+  return +c;
+}
 ```
