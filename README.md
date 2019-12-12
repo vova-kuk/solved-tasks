@@ -36,3 +36,9 @@ function noSpace(x){
   return x.join('');
 }
 ```
+#### Sum The Strings
+```javascript
+function sumStr(a,b) {
+  return (+a + +b).toString();
+}
+```
