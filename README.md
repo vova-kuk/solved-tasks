@@ -19,3 +19,13 @@ for (let i = 0; i < N; i++){
   return arr;
 }
 ```
+#### Breaking chocolate problem
+```javascript
+function breakChocolate(n,m) {
+  console.log(n, m);
+  if (n === 0 || m === 0) return 0;
+  let acc = m * n - 1;
+  
+  return acc;
+}
+```
