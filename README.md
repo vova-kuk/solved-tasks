@@ -29,3 +29,10 @@ function breakChocolate(n,m) {
   return acc;
 }
 ```
+#### Remove String Spaces
+```javascript
+function noSpace(x){
+  x = x.split(' ');
+  return x.join('');
+}
+```
