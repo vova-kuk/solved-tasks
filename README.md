@@ -25,3 +25,13 @@ function apple(x){
   return Math.pow(x, 2) > 1000 ? 'It\'s hotter than the sun!!' : 'Help yourself to a honeycomb Yorkie for the glovebox.';
 }
 ```
+#### Two Oldest Ages
+```javascript
+function twoOldestAges(ages){
+  ages.sort((a, b) => a - b);
+  let a = [];
+  a.push(ages[ages.length - 2], ages[ages.length - 1]);
+  console.log(ages, a);
+  return a;
+}
+```
