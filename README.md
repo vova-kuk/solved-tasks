@@ -35,3 +35,9 @@ function twoOldestAges(ages){
   return a;
 }
 ```
+#### Is it a palindrome?
+```javascript
+function isPalindrome(x) {
+  return x.toLowerCase() === x.split('').reverse().join('').toLowerCase();;
+}
+```
