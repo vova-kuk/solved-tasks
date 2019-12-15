@@ -41,3 +41,15 @@ function isPalindrome(x) {
   return x.toLowerCase() === x.split('').reverse().join('').toLowerCase();;
 }
 ```
+#### Make a function that does arithmetic!
+```javascript
+function arithmetic(a, b, o){
+  let obj = {
+    "add": a + b,
+    "subtract": a - b,
+    "multiply": a * b,
+    "divide": a / b,
+    }
+  return obj[o]; 
+}
+```
