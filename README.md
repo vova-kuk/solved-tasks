@@ -53,3 +53,13 @@ function arithmetic(a, b, o){
   return obj[o]; 
 }
 ```
+#### Playing with cubes I (Java)
+public class Cube{
+  int Side;
+  void setSide(int num){
+    this.Side = num;
+  }
+  int getSide(){
+    return Side;
+  } 
+}
