@@ -63,3 +63,8 @@ public class Cube{
     return Side;
   } 
 }
+#### Numbers to Letters
+```javascript
+const switcher = x => x.reduce((word, number) => `${word}${' ?!abcdefghijklmnopqrstuvwxyz'[29 - number]}`, '')
+
+```
