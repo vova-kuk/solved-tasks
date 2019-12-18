@@ -66,5 +66,15 @@ public class Cube{
 #### Numbers to Letters
 ```javascript
 const switcher = x => x.reduce((word, number) => `${word}${' ?!abcdefghijklmnopqrstuvwxyz'[29 - number]}`, '')
-
+```
+#### Simple Fun #37: House Numbers Sum
+```javascript
+function houseNumbersSum(A) {
+  let sum = 0;
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] === 0) break;
+    sum += A[i];
+  }
+  return sum;  
+}
 ```
