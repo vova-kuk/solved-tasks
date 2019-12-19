@@ -78,3 +78,21 @@ function houseNumbersSum(A) {
   return sum;  
 }
 ```
+#### Well of Ideas - Easy Version (Java)
+```java
+public class Kata {
+ 
+
+  public static String well(String[] x) {
+    int a = 0;
+    for (int i = 0; i < x.length; i++) {
+      if (x[i].equals("good")) a++;
+    }
+    
+  if (a == 0) return "Fail!";
+  if (a > 0 && a < 3) return "Publish!";
+  if (a > 2) return "I smell a series!";
+  return "";
+  }
+}
+```
