@@ -96,3 +96,13 @@ public class Kata {
   }
 }
 ```
+#### Tail Swap
+```javascript
+function tailSwap(arr) {
+  let a = arr[0].split(':');
+  let b = arr[1].split(':');
+  let ar = a[0] + ':' + b[1];
+  let ar2 = b[0] + ':' + a[1];
+  return [ar, ar2];
+}
+```
