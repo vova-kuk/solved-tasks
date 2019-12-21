@@ -106,3 +106,13 @@ function tailSwap(arr) {
   return [ar, ar2];
 }
 ```
+#### Santa's Naughty List
+```javascript
+function findChildren(s, c) {
+  let arr = [];
+  for (let i = 0; i < s.length; i++) {
+    if (c.includes(s[i]) && !arr.includes(s[i])) arr.push(s[i])
+  }
+  return arr.sort();
+}
+```
