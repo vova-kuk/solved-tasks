@@ -122,3 +122,9 @@ function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0;
 }
 ```
+#### Find The Parity Outlier
+```javascript
+function findOutlier(int){
+  return int.filter(el => el % 2).length > 1 ? int.find(el => el % 2 === 0): int.find(el => el % 2);
+}
+```
