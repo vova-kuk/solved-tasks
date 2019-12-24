@@ -128,3 +128,9 @@ function findOutlier(int){
   return int.filter(el => el % 2).length > 1 ? int.find(el => el % 2 === 0): int.find(el => el % 2);
 }
 ```
+#### Array.diff
+```javascript
+function array_diff(a, b) {
+  return a.filter(el => !b.includes(el));
+}
+```
