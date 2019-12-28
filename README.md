@@ -162,3 +162,15 @@ function isValidWalk(walk) {
   return (n.length===s.length)&&(w.length===e.length)&&(walk.length===10)
 }
 ```
+#### Your order, please
+```javascript
+function order(w){
+  if (w === '') return '';
+  let arr = w.split(' ');
+  let result = [];
+  for (let i = 1; i < arr.length + 1; i++) {
+    result.push(arr.find(el => el.includes(i)));
+  }
+  return result.join(' ');
+}
+```
