@@ -194,3 +194,7 @@ function productFib(prod){
   return fib[a]*fib[b]===prod ? [fib[a], fib[b], true] : [fib[b], fib[b+1], false];
 }
 ```
+#### Which x for that sum?
+```javascript
+let solve = m => (2 * m + 1 -  Math.sqrt(4 * m + 1)) / (2 * m);
+```
