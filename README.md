@@ -198,3 +198,19 @@ function productFib(prod){
 ```javascript
 let solve = m => (2 * m + 1 -  Math.sqrt(4 * m + 1)) / (2 * m);
 ```
+#### PI approximation
+```javascript
+function iterPi(epsilon) {
+	let nearlyPi = 0;
+	let alternate = 1;
+	let i = 1;
+	let count = 0;
+	while ((Math.abs(nearlyPi * 4 - Math.PI)) > epsilon) {
+		nearlyPi += (1 / i * alternate)
+		i += 2;
+		alternate *= -1;
+		count += 1;
+	}
+	return [count, (Math.round((nearlyPi * 4) * 10000000000) / 10000000000)];
+}
+```
