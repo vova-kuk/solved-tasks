@@ -214,3 +214,9 @@ function iterPi(epsilon) {
 	return [count, (Math.round((nearlyPi * 4) * 10000000000) / 10000000000)];
 }
 ```
+#### Sum of Digits / Digital Root
+```javascript
+function digital_root(n) {
+  return (n - 1) % 9 + 1;
+}
+```
