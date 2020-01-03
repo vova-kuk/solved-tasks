@@ -220,3 +220,31 @@ function digital_root(n) {
   return (n - 1) % 9 + 1;
 }
 ```
+#### Tip Calculator
+```javascript
+function calculateTip(a, r) {
+  console.log(a, r);
+  let rating = r.toLowerCase();
+  let res;
+  switch (rating) {
+    case 'terrible':
+    res = 0;
+    break;
+    case 'poor':
+    res = a * 1.05 - a;
+    break;
+    case 'good':
+    res = a * 1.1 - a;
+    break;
+    case 'great':
+    res = a * 1.15 - a;
+    break;
+    case 'excellent':
+    res = a * 1.2 - a;
+    break;
+    default:
+    return "Rating not recognised";
+  }
+  return Math.ceil(res);
+}
+```
