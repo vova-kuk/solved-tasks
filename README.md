@@ -248,3 +248,13 @@ function calculateTip(a, r) {
   return Math.ceil(res);
 }
 ```
+#### 
+```javascript
+function isIntArray(arr) {
+  if (!arr) return false;
+  if (0 === arr.length) return true;
+  if (arr.some(el => !Number.isInteger(el))) return false;
+  if (arr.some(el => isNaN(el))) return false;
+  return arr.every(el => typeof el === 'number');
+}
+```
