@@ -248,7 +248,7 @@ function calculateTip(a, r) {
   return Math.ceil(res);
 }
 ```
-#### 
+#### Is Integer Array?
 ```javascript
 function isIntArray(arr) {
   if (!arr) return false;
@@ -256,5 +256,11 @@ function isIntArray(arr) {
   if (arr.some(el => !Number.isInteger(el))) return false;
   if (arr.some(el => isNaN(el))) return false;
   return arr.every(el => typeof el === 'number');
+}
+```
+#### Basic Math (Add or Subtract)
+```javascript
+function calculate(str) {
+return str.split('plus').join(' ').split('minus').join(' -').split(' ').reduce((acc, curr) => acc + +curr, 0) + '';
 }
 ```
