@@ -274,3 +274,21 @@ function absentVowel(x){
   if (!x.match(/u/)) return 4;
 }
 ```
+#### Beginner Series #3 Sum of Numbers
+```javascript
+function getSum( a,b ){
+  let result = 0;
+  if (a < b) {
+    for (let i = a; i <= b; i++) {
+      result += i;
+  }
+  } else if (a > b) {
+    for (let i = b; i <= a; i++) {
+      result += i;
+  }
+  } else {
+    return a;
+  }
+  return result;
+}
+```
