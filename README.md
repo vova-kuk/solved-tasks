@@ -292,3 +292,20 @@ function getSum( a,b ){
   return result;
 }
 ```
+#### London CityHacker
+```javascript
+function londonCityHacker(j) {
+  let res = 0;
+  for (let i = 0; i < j.length; i++) {
+    if (typeof j[i] === 'string') res += 2.4;
+    if (typeof j[i] === 'number') res += 1.5;
+  }
+  for (let i = 0; i < j.length; i++) {
+    if (typeof j[i] === 'number' && typeof j[i + 1] === 'number') {
+    res -= 1.5;
+    i++;
+    }
+  }
+  return '£' + res.toFixed(2);
+}
+```
