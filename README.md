@@ -309,3 +309,10 @@ function londonCityHacker(j) {
   return '£' + res.toFixed(2);
 }
 ```
+#### Watermelon
+```javascript
+function divide(weight){
+  if (weight === 2) return false;
+  return weight % 2 === 0;
+}
+```
