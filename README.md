@@ -316,3 +316,14 @@ function divide(weight){
   return weight % 2 === 0;
 }
 ```
+#### Minimize Sum Of Array (Array Series #1)
+```javascript
+function minSum(arr) {
+  let sum = 0;
+  arr.sort((a, b) => a - b);
+  for (let i = 0, j = arr.length - 1; i < arr.length / 2; i++, j--) {
+    sum += arr[i] * arr[j];
+  }
+  return sum;
+}
+```
