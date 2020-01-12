@@ -327,3 +327,15 @@ function minSum(arr) {
   return sum;
 }
 ```
+#### Cat and Mouse - Harder Version
+```javascript
+function catMouse(x, j){
+  const C = x.indexOf('C');
+  const m = x.indexOf('m');
+  const D = x.indexOf('D');
+  if (C === -1 || m === -1 || D === -1) return "boring without all three";
+  if (Math.abs(C - m) > j) return "Escaped!";
+  if (Math.abs(C - m) <= j && ((D < C && D < m) || (D > C && D > m))) return "Caught!";
+  if (Math.abs(C - m) <= j && ((D > C && D < m) || (D < C && D > m))) return 'Protected!';
+}
+```
