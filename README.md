@@ -339,3 +339,21 @@ function catMouse(x, j){
   if (Math.abs(C - m) <= j && ((D > C && D < m) || (D < C && D > m))) return 'Protected!';
 }
 ```
+#### Moves in squared strings (I)
+```javascript
+const reverseString = (str, splitBy) =>
+  str
+    .split(splitBy)
+    .reverse()
+    .join(splitBy)
+
+const vertMirror = string =>
+  string
+    .split('\n')
+    .map(str => reverseString(str, ''))
+    .join('\n')
+
+const horMirror = string => reverseString(string, '\n')
+
+const oper = (fct, s) => fct(s)
+```
