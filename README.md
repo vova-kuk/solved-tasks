@@ -367,3 +367,9 @@ function getDivisorsCnt(n){
   return result;
 }
 ```
+#### Sum of odd numbers
+```javascript
+function rowSumOddNumbers(n) {
+	return n * n * n;
+}
+```
