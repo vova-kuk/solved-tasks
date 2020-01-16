@@ -373,3 +373,20 @@ function rowSumOddNumbers(n) {
 	return n * n * n;
 }
 ```
+#### The Wide-Mouthed frog!
+```javascript
+function mouthSize(a) {
+  return a.toLowerCase() === "alligator" ? "small": "wide";
+}
+```
+
+
+
+
+
+
+
+
+
+
+
