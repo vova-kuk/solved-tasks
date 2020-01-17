@@ -379,6 +379,17 @@ function mouthSize(a) {
   return a.toLowerCase() === "alligator" ? "small": "wide";
 }
 ```
+#### Multiples of 3 or 5
+```javascript
+function solution(n){
+  if (n < 3) return 0;
+  const arr = [];
+  for (let i = 0; i < n; i++) {
+    if ((i % 3 === 0 || i % 5 === 0) && !arr.includes(i)) arr.push(i);
+  }
+  return arr.reduce((a, c) => a + c);
+}
+```
 
 
 
