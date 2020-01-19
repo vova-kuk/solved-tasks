@@ -390,7 +390,11 @@ function solution(n){
   return arr.reduce((a, c) => a + c);
 }
 ```
-
+#### Disarium Number (Special Numbers Series #3)
+```javascript
+const disariumNumber = n =>
+  [...String(n)].reduce((total, num, index) => total + Number(num) ** (index + 1), 0) === n ? 'Disarium !!' : 'Not !!'
+```
 
 
 
