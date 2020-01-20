@@ -395,6 +395,15 @@ function solution(n){
 const disariumNumber = n =>
   [...String(n)].reduce((total, num, index) => total + Number(num) ** (index + 1), 0) === n ? 'Disarium !!' : 'Not !!'
 ```
+#### STRONGN Strong Number (Special Numbers Series #2)
+```javascript
+const factorial = n => (n < 0 ? null : n === 0 ? 1 : n * factorial(--n))
+const strong = n =>
+  [...String(n)].map(Number).reduce((total, digit) => total + factorial(digit), 0) === n
+    ? 'STRONG!!!!'
+    : 'Not Strong !!'
+
+```
 
 
 
