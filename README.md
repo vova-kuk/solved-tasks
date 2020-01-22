@@ -402,9 +402,18 @@ const strong = n =>
   [...String(n)].map(Number).reduce((total, digit) => total + factorial(digit), 0) === n
     ? 'STRONG!!!!'
     : 'Not Strong !!'
-
 ```
-
+#### Grasshopper - Grade book
+```javascript
+function getGrade (s1, s2, s3) {
+  const a = (s1 + s2 + s3) / 3;
+  if (a >= 90) return 'A';
+  if (a >= 80 && a < 90) return 'B';
+  if (a >= 70 && a < 80) return 'C';
+  if (a >= 60 && a < 70) return 'D';
+  if (a < 60) return 'F';
+}
+```
 
 
 
