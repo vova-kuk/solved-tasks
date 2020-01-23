@@ -414,6 +414,30 @@ function getGrade (s1, s2, s3) {
   if (a < 60) return 'F';
 }
 ```
+#### Make the Deadfish swim
+```javascript
+function parse (data) {
+  let res = 0;
+  const arr = [];
+  for (let i = 0; i < data.length; i++) {
+    switch (data[i]) {
+      case 'i':
+        res++;
+        break;
+      case 'd':
+        res--;
+        break;
+      case 's':
+        res *= res;
+        break;
+      case 'o':
+        arr.push(res);
+        break;
+      }
+  }
+  return arr;
+}
+```
 
 
 
