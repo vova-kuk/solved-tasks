@@ -438,7 +438,14 @@ function parse (data) {
   return arr;
 }
 ```
-
+#### Grasshopper - Terminal game move function
+```Java
+public class Move {
+    public static int move(int position, int roll) {
+        return roll * 2 + position;
+    }
+}
+```
 
 
 
