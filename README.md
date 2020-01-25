@@ -446,7 +446,13 @@ public class Move {
     }
 }
 ```
-
+#### Jumping Number (Special Numbers Series #4)
+```javascript
+const jumpingNumber = n =>
+  [...String(n)].every((num, index, array) => index === 0 || Math.abs(num - array[index - 1]) === 1)
+    ? 'Jumping!!'
+    : 'Not!!'
+```
 
 
 
