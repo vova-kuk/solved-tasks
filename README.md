@@ -453,6 +453,15 @@ const jumpingNumber = n =>
     ? 'Jumping!!'
     : 'Not!!'
 ```
+#### Simple Fun #1: Seats in Theater
+```javascript
+const seatsInTheater = (nCols, nRows, col, row) =>
+  (nRows - row) * (nCols - (col - 1))
+```
+
+
+
+
 
 
 
