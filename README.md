@@ -458,6 +458,10 @@ const jumpingNumber = n =>
 const seatsInTheater = (nCols, nRows, col, row) =>
   (nRows - row) * (nCols - (col - 1))
 ```
+#### Product Of Maximums Of Array (Array Series #2)
+```javascript
+const maxProduct = (n, s) => n.sort((a, b) => b - a).slice(0, +s).reduce((a, c) => a * c, 1);
+```
 
 
 
