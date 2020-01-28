@@ -462,7 +462,10 @@ const seatsInTheater = (nCols, nRows, col, row) =>
 ```javascript
 const maxProduct = (n, s) => n.sort((a, b) => b - a).slice(0, +s).reduce((a, c) => a * c, 1);
 ```
-
+#### Palindrome Strings
+```javascript
+const isPalindrome = (line) => line.toString() === line.toString().split('').reverse().join('');
+```
 
 
 
