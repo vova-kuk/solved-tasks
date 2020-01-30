@@ -473,6 +473,19 @@ function numPrimorial(n){
   return num.slice(0, n).reduce((a, b) => a * b);
 }
 ```
+#### Balanced Number (Special Numbers Series #1 )
+```javascript
+function balancedNum(number){
+    const n = number.toString().split('');
+    if (n.length < 3) return "Balanced";
+    let a = 0, b = 0;
+    for (let i = 0, j = n.length - 1; i < (n.length/2)-1; i++, j--){
+      a += +n[i];
+      b += +n[j];
+    }
+    return a === b? "Balanced": "Not Balanced";
+}
+```
 
 
 
