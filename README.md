@@ -494,6 +494,10 @@ public class Cockroach{
   }
 }
 ```
+#### Minimum to multiple
+```javascript
+const minimum = (a, x) => !a % x ? 0: Math.min(a % x,((1 + Math.floor(a / x)) * x) - a);
+```
 
 
 
