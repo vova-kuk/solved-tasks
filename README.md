@@ -498,6 +498,17 @@ public class Cockroach{
 ```javascript
 const minimum = (a, x) => !a % x ? 0: Math.min(a % x,((1 + Math.floor(a / x)) * x) - a);
 ```
+#### 1/n- Cycle
+```javascript
+function cycle(n) {
+  if (n % 2 == 0 || n % 5 == 0) return -1;
+  let i = 0, val = 1;
+  while (++i) {
+    val = val * 10 % n;
+    if (val == 1) return i;
+  }
+}
+```
 
 
 
