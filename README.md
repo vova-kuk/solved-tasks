@@ -509,6 +509,14 @@ function cycle(n) {
   }
 }
 ```
+#### Help Bob count letters and digits.
+```javascript
+function countLettersAndDigits(input) {
+  let match = input.match(/[a-z0-9]/gi);
+  return match === null ? 0 : match.length;
+}
+```
+
 
 
 
