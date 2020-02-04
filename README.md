@@ -516,7 +516,17 @@ function countLettersAndDigits(input) {
   return match === null ? 0 : match.length;
 }
 ```
-
+#### Will you survive the zombie onslaught?
+```javascript
+function zombie_shootout(zombies, range, ammo) {
+  let step = range * 2;
+  if (ammo < step && zombies > ammo)
+    return `You shot ${ammo} zombies before being eaten: ran out of ammo.`;
+  if (zombies > step)
+    return `You shot ${step} zombies before being eaten: overwhelmed.`;
+  return `You shot all ${zombies} zombies.`;
+} 
+```
 
 
 
