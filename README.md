@@ -527,7 +527,10 @@ function zombie_shootout(zombies, range, ammo) {
   return `You shot all ${zombies} zombies.`;
 } 
 ```
-
+#### A disguised sequence (I)
+```javascript
+let fcn = n => 2 ** n;
+```
 
 
 
