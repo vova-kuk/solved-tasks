@@ -531,7 +531,12 @@ function zombie_shootout(zombies, range, ammo) {
 ```javascript
 let fcn = n => 2 ** n;
 ```
-
+#### Thinking & Testing : True or False
+```javascript
+function testit(n){
+  return n.toString(2).replace(/0/g,'').length
+}
+```
 
 
 
