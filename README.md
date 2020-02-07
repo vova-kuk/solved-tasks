@@ -537,6 +537,10 @@ function testit(n){
   return n.toString(2).replace(/0/g,'').length
 }
 ```
+#### Drying Potatoes
+```javascript
+const potatoes = (p0, w0, p1) => Math.floor(w0 * (100 - p0) / (100 - p1));
+```
 
 
 
