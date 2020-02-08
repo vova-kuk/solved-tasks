@@ -541,7 +541,14 @@ function testit(n){
 ```javascript
 const potatoes = (p0, w0, p1) => Math.floor(w0 * (100 - p0) / (100 - p1));
 ```
-
+#### Arrh, grabscrab!
+```javascript
+function grabscrab(anagram, dictionary) {
+  anagram=anagram.split('').sort().join()
+  let arr = dictionary.slice().map(v=>v.split('').sort().join()===anagram)
+  return dictionary.filter((v,i)=>arr[i]===true)
+}
+```
 
 
 
