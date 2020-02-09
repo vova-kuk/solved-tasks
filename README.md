@@ -549,6 +549,17 @@ function grabscrab(anagram, dictionary) {
   return dictionary.filter((v,i)=>arr[i]===true);
 }
 ```
+#### Complete The Pattern #1
+```javascript
+function pattern(n){
+ if (n < 1) return '';
+ let output="1";
+   for (let i = 2; i <= n; i++) {
+    output += '\n' + String(i).repeat(i);
+   }
+ return output;
+}
+```
 
 
 
