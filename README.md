@@ -564,6 +564,20 @@ function pattern(n){
 ```javascript
 const noOdds = ( values ) => values.filter(el => el % 2 === 0);
 ```
+#### Row of the odd triangle
+```javascript
+function oddRow(n) {
+  let a = 1;
+  for (let i = 2, b = 2; i <= n; i++, b += 2) {
+    a += b;
+  }
+  let arr = [];
+  for (let i = 1; i <= n; i++, a += 2) {
+    arr.push(a);
+  }
+  return arr;
+}
+```
 
 
 
