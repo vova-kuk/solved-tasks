@@ -560,6 +560,10 @@ function pattern(n){
  return output;
 }
 ```
+#### No oddities here
+```javascript
+const noOdds = ( values ) => values.filter(el => el % 2 === 0);
+```
 
 
 
