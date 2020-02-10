@@ -578,7 +578,35 @@ function oddRow(n) {
   return arr;
 }
 ```
+#### What will be the odd one out?
+```javascript
+function oddOneOut(str) {
+   let arr = str.split('');
+   let result = [];
+   let a;
+   for (let i = 0; i < arr.length; i++) {
+     a = arr.indexOf(arr[i], i+1);
+     console.log(arr.indexOf(arr[i]), arr.lastIndexOf(arr[i]),arr.indexOf(arr[i], i+1));
+       if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
+       delete arr[i];
+       delete arr[a];
+       result.push(arr[i]);
+       }
+   }
+   return arr.join('').split('');
+}
 
+function oddOneOut(str) {
+  const obj = {}, result = [];
+  for (let i = 0; i < str.length; i++) {
+    if (obj[str[i]]) obj[str[i]]++;
+    else obj[str[i]] = 1;
+    if (str.lastIndexOf(str[i]) === i && obj[str[i]] % 2 !== 0)
+      result.push(str[i]);
+  }
+  return result;
+}
+```
 
 
 
