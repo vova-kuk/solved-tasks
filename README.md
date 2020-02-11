@@ -607,6 +607,10 @@ function oddOneOut(str) {
   return result;
 }
 ```
+#### Holiday VI - Shark Pontoon
+```angular2html
+const shark = (pD, sD, yS, sS, d) => d === true ? pD/yS < sD/(sS/2) ? "Alive!": "Shark Bait!": pD/yS < sD/sS ? "Alive!": "Shark Bait!";
+```
 
 
 
