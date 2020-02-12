@@ -624,6 +624,12 @@ function infected(s) {
   return 100*infected/total;
 }
 ```
+#### Convert string to camel case
+```javascript
+function toCamelCase(str) {
+  return str.replace(/[_-]([a-z])/ig, (_, c) => c.toUpperCase())
+}
+```
 
 
 
