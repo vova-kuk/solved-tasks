@@ -611,9 +611,18 @@ function oddOneOut(str) {
 ```javascript
 const shark = (pD, sD, yS, sS, d) => d === true ? pD/yS < sD/(sS/2) ? "Alive!": "Shark Bait!": pD/yS < sD/sS ? "Alive!": "Shark Bait!";
 ```
-#### 
+#### Pandemia 🌡️
 ```javascript
-
+function infected(s) {
+  if (!s.includes(0) && !s.includes(0)) return 0;
+  let total = 0, infected = 0;
+  s = s.split('X');
+  for (let i = 0; i < s.length; i++) {
+    total += s[i].length;
+    if (s[i].includes(1)) infected += s[i].length;
+  }
+  return 100*infected/total;
+}
 ```
 
 
