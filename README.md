@@ -638,6 +638,20 @@ public class Solution {
     }
 }
 ```
+#### Break camelCase
+```javascript
+function solution(str) {
+  str = str.split('');
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) result.push(' ');
+    result.push(str[i]);
+  }
+  return result.join('');
+}
+```
+
+
 
 
 
