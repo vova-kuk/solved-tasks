@@ -665,10 +665,9 @@ const sumOfMinimums = (arr) => arr.reduce((a, b) => a + Math.min(...b), 0);
 #### Sum of Triangular Numbers
 ```javascript
 function sumTriangularNumbers(n) {
-var sum = 0;  
-for(var i = 1; i <= n; i++)
-{
-sum += (i*(i+1))/2;
+let sum = 0;  
+for(var i = 1; i <= n; i++) {
+  sum += (i*(i+1))/2;
 }
 return sum;
 }
