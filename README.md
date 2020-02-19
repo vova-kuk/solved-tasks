@@ -693,6 +693,13 @@ function mineLocation(field){
         return [i, j];
 }
 ```
+#### "Very Even" Numbers.
+```javascript
+function isVeryEvenNumber(n) {
+  if (n < 10 && n%2 === 0) return true;
+  return (n > 9) ? isVeryEvenNumber(String(n).split('').reduce((a,b) => +a + +b)) : false;
+}
+```
 
 
 
