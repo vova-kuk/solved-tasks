@@ -700,6 +700,10 @@ function isVeryEvenNumber(n) {
   return (n > 9) ? isVeryEvenNumber(String(n).split('').reduce((a,b) => +a + +b)) : false;
 }
 ```
+#### noobCode 01: SUPERSIZE ME.... or rather, this integer!
+```javascript
+const superSize = (num) => Number(String(num).split('').sort((a, b) => b - a).join(''));
+```
 
 
 
