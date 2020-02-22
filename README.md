@@ -704,6 +704,19 @@ function isVeryEvenNumber(n) {
 ```javascript
 const superSize = (num) => Number(String(num).split('').sort((a, b) => b - a).join(''));
 ```
+#### Chocolate Party
+```javascript
+function shareChocolate(n) {
+  if (n < 1 || n%1 !== 0) return null;
+  let tables = [0,0,0,0,0,0], i = 0;
+  for(let i = 0; i < n; i++) {
+    let chocolate = tables.map((kids, choco) => kids ? (choco+1)/(kids+1) : choco+1)
+    const idx = chocolate.indexOf(Math.max(...chocolate))
+    tables[idx]++;
+  }
+  return tables;
+}
+```
 
 
 
