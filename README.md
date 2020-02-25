@@ -737,6 +737,23 @@ const menFromBoys = arr => {
   return [...evenNumbers, ...oddNumbers]
 }
 ```
+#### Card Game
+```javascript
+function cardGame(card1, card2, trump) {
+    function compare(card1, card2, trump) {
+        const allRanks = '2345678910JQKA';
+        if ([card1, card2].includes('joker')) return (card1 === 'joker') - (card2 === 'joker');
+        const suits = [card1.slice(-1), card2.slice(-1)];
+        if (suits[0] === suits[1]) return allRanks.indexOf(card1[0]) - allRanks.indexOf(card2[0]);
+        if (suits.includes(trump)) return (suits[0] === trump) - (suits[1] === trump);
+        return 0;
+    }
+    if (card1 === card2)
+        return 'Someone cheats.';
+    let cmp = compare(card1, card2, trump);
+    return (cmp === 0) ? 'Let us play again.' : `The ${(cmp > 0)? 'first': 'second'} card won.`;
+}
+```
 
 
 
