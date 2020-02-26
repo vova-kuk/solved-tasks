@@ -754,6 +754,18 @@ function cardGame(card1, card2, trump) {
     return (cmp === 0) ? 'Let us play again.' : `The ${(cmp > 0)? 'first': 'second'} card won.`;
 }
 ```
+#### Esoland MiniBitMove
+```javascript
+function interpreter(tape, array) {
+    let tapeIdx = 0, index = 0;
+    array = array.split("").map(a=>+a);
+    while(index != array.length){
+        (tape[tapeIdx] === '0') ? index++ : array[index] = ~~!(array[index]);
+        (tapeIdx >= tape.length-1) ? tapeIdx = 0: tapeIdx++;
+    }
+    return array.join("");
+}
+```
 
 
 
