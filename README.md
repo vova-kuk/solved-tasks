@@ -796,12 +796,14 @@ function index(array, n){
   return Math.pow(array[n], n);
 }
 ```
-#### 
-Find the Difference in Age between Oldest and Youngest Family Members
+#### Find the Difference in Age between Oldest and Youngest Family Members
 ```javascript
 const differenceInAges = ages => [Math.min(...ages), Math.max(...ages), Math.max(...ages) - Math.min(...ages)];
 ```
-
+#### Form The Minimum
+```javascript
+const minValue = v => +v.filter((el, i) => v.indexOf(el) === i).sort((a, b) => a - b).join('');
+```
 
 
 
