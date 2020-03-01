@@ -804,6 +804,10 @@ const differenceInAges = ages => [Math.min(...ages), Math.max(...ages), Math.max
 ```javascript
 const minValue = v => +v.filter((el, i) => v.indexOf(el) === i).sort((a, b) => a - b).join('');
 ```
+#### Experimenting with a sequence of complex numbers
+```javascript
+let f = (x, y, eps) => Math.max(-1,Math.log(eps)/Math.log(Math.hypot(x,y)));
+```
 
 
 
