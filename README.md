@@ -808,6 +808,19 @@ const minValue = v => +v.filter((el, i) => v.indexOf(el) === i).sort((a, b) => a
 ```javascript
 let f = (x, y, eps) => Math.max(-1,Math.log(eps)/Math.log(Math.hypot(x,y)));
 ```
+#### Build a pile of Cubes
+```javascript
+let findNb = function(n) {
+  let sum = 0, idx = 1;
+  
+  while(sum < n) {
+    sum += Math.pow(idx, 3);
+    idx += 1;
+  }
+  
+  return (sum === n) ? idx-1 : -1;
+}
+```
 
 
 
