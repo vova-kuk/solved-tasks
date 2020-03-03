@@ -821,6 +821,15 @@ let findNb = function(n) {
   return (sum === n) ? idx-1 : -1;
 }
 ```
+#### Fantabulous Birthday
+```javascript
+function fantabulousBirthday(S){
+    let row, col, n = Math.round(Math.sqrt(S));
+    Math.pow(n, 2) >= S? col = n * n - S + 1 : col = S - n * n;
+    Math.pow(n, 2) >= S? row = n : row = n + 1;
+    return n & 1? [col, row] : [row, col];
+}
+```
 
 
 
