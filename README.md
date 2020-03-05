@@ -840,6 +840,14 @@ String.prototype.isImage = function() {
   return /^[a-zA-Z]+\.(jpg|jpeg|png|bmp|gif)$/.test(this);
 }
 ```
+#### Errors Histogram
+```javascript
+function hist(s) {
+  let obj = {u: 0, w: 0, x: 0, z: 0};
+  s.split('').forEach(x => {if (x in obj) obj[x]++});
+  return Object.entries(obj).filter(([a, x]) => x).map(([a, x]) => `${a}  ${x}     ${'*'.repeat(x)}`).join('\r');
+}
+```
 
 
 
