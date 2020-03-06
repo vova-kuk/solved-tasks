@@ -848,7 +848,10 @@ function hist(s) {
   return Object.entries(obj).filter(([a, x]) => x).map(([a, x]) => `${a}  ${x}     ${'*'.repeat(x)}`).join('\r');
 }
 ```
-
+#### Consonant Value
+```javascript
+const solve = s => Math.max(...s.split(/[aeiou]+/).map(group => group.split('').reduce((a,b) =>a + b.charCodeAt()-96,0))); 
+```
 
 
 
