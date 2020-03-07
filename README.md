@@ -852,6 +852,20 @@ function hist(s) {
 ```javascript
 const solve = s => Math.max(...s.split(/[aeiou]+/).map(group => group.split('').reduce((a,b) =>a + b.charCodeAt()-96,0))); 
 ```
+#### Schrodingers Boolean
+```javascript
+class OmniBool {
+  constructor() {
+    this.n = false;
+  }
+}
 
+OmniBool.prototype[Symbol.toPrimitive] = function() { 
+  this.n = !this.n;
+  return this.n;
+};
+
+let omnibool = new OmniBool(); 
+```
 
 
