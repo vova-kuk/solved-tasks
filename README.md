@@ -867,5 +867,17 @@ OmniBool.prototype[Symbol.toPrimitive] = function() {
 
 let omnibool = new OmniBool(); 
 ```
+#### Braces Status
+```javascript
+function bracesStatus(str){
+  str = str.replace(/[^\(\)\[\]\{\}]/g, '');
+  while (/\(\)|\[\]|\{\}/.test(str)) 
+    str = str.replace(/\(\)|\[\]|\{\}/g, '');
+  return (str.length < 1);
+} 
+```
+
+
+
 
 
