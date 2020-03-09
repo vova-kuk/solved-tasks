@@ -876,7 +876,14 @@ function bracesStatus(str){
   return (str.length < 1);
 } 
 ```
-
+#### Count Letters In String
+```javascript
+function letterCount(s){
+  let res = {};
+  [...s].sort((a, b) => a - b).forEach(el => res[el] ? res[el]++ : res[el] = 1)
+  return res;
+}
+```
 
 
 
