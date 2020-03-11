@@ -884,7 +884,34 @@ function letterCount(s){
   return res;
 }
 ```
+#### Backwards Read Primes
+```javascript
+let backwardsPrime = function(min, max) {
+    let arr = [];
+    for(let i = min; i <= max; i++) {
+        let backwardNum = reverseNum(i);
+        if(isPrime(i) && isPrime(backwardNum) && i != backwardNum){
+            arr.push(i);
+        }
+    }
+    return arr;
+}
 
+function reverseNum(n) {
+    return Number(n.toString().split("").reverse().join(""));
+}
+
+function isPrime(n) {
+    if(n === 2 || n === 3) { return true; }
+    if(n % 2 === 0 || n < 2) { return false; }
+    for(let i = 3; i <= Math.sqrt(n); i+=2) {
+        if(n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
 
 
 
