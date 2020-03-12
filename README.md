@@ -912,6 +912,15 @@ function isPrime(n) {
     return true;
 }
 ```
-
+#### ASCII Fun#1 X-Shape
+```javascript
+function x(n) {
+    let arr = Array(n).fill().map(_ => "□".repeat(n).split(""))
+    for(let i = 0; i < arr.length; i++) {
+        [arr[i][i], arr[i][arr.length-1-i]] = ["■","■"];
+    }
+    return arr.map(a=>a.join("")).join("\n");
+}
+```
 
 
