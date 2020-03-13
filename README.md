@@ -922,5 +922,39 @@ function x(n) {
     return arr.map(a=>a.join("")).join("\n");
 }
 ```
+#### A String of Sorts
+```javascript
+function sortString(str, order ) {
+  let arr = str.split(""), s = "";
+  for (let o of order )
+    while (arr.includes(o))
+      s += arr.splice( arr.indexOf(o), 1 )[0];
+  s += arr.join("");
+  return s;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
