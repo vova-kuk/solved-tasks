@@ -990,7 +990,16 @@ function amidakuji(arr){
   return res;
 }
 ```
-
+#### Area of a regular polygon
+```javascript
+function areaOfRegularPolygon(s) {
+    let match = s.match(/^(\d+) sides of (\d+(?:\.\d+)?) (\w+) each$/);
+    if(!match || match[1] < 3) return 'Invalid input';
+    let [sides, len, unit] = match.splice(1, 4)
+    let area = Math.pow(len, 2) * sides / (4 * Math.tan(Math.PI / sides));
+    return area.toFixed(2) + ' sq.' + unit;
+}
+```
 
 
 
