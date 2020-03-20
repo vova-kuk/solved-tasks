@@ -1000,7 +1000,18 @@ function areaOfRegularPolygon(s) {
     return area.toFixed(2) + ' sq.' + unit;
 }
 ```
-
+#### Array Deep Count
+```javascript
+function deepCount(arr) {
+    let temp = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(Array.isArray(arr[i]))
+            temp += deepCount(arr[i]);
+        temp++;
+    }
+    return temp;
+}
+```
 
 
 
