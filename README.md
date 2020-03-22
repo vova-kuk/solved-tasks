@@ -1021,7 +1021,38 @@ Array.prototype.sum = function() { return this.reduce((a,b) => a + b, 0); }
 Array.prototype.even = function() { return this.filter( a => a % 2 === 0); }
 Array.prototype.odd = function() { return this.filter( a => a % 2 !== 0); }
 ```
+#### Automaton (Part 2)
+```javascript
+function automaton(val) {
+    this.isPrime = function(n) {
+        if(n === 2) { return true; }
+        if(n < 2 || n % 2 === 0) { return false; }
+        for(let i = 3; i <= Math.sqrt(n); i+=2) {
+            if(n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    this.swap = function(obj){
+        let res = {};
+        for(var key in obj){
+            res[obj[key]] = key;
+        }
+        return res;
+    }
+
+    switch(typeof val) {
+        case "string":
+            return val.toLowerCase().replace(/[^aeiou]/gi, "").length;
+        case "number":
+            return (val % 1 === 0) ? isPrime(val) : false;
+        case "object":
+            return swap(val);
+    }
+} 
+```
 
 
 
