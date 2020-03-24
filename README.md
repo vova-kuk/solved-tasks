@@ -1061,7 +1061,15 @@ function maxBall(v0) {
   return Math.round(v0/g);
 }
 ```
-
+#### Basic Encryption
+```javascript
+let encrypt = function(str, n) {
+    return str.replace(/./g, a  => {  
+        let temp = a.charCodeAt(0) + n;
+        return temp>255 ? String.fromCharCode(temp%256) : String.fromCharCode(temp); 
+    })
+}
+```
 
 
 
