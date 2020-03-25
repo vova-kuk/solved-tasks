@@ -1070,6 +1070,32 @@ let encrypt = function(str, n) {
     })
 }
 ```
+#### Basic Scheme Math Composition of Functions
+```javascript
+function scheme(cmd) {
+  let OBJS = {
+    '+': (args) => args.reduce((a, b) => a + b, 0),
+    '-': (args) => args.length <= 1 ?
+                        args.reduce((a, b) => a - b, 0) :
+                        args.slice(1).reduce((a, b) => a - b, args[0]),
+    '*': (args) => args.reduce((a, b) => a * b, 1),
+    '/': (args) => args.length === 1 ?
+                        1 / args[0] :
+                        args.slice(1).reduce((a, b) => a / b, args[0])
+  }
+  function evaluate(tokens) {
+    let arr = tokens.shift();
+    if (!isNaN(+arr)) return +arr;
+    if (arr !== '(') throw 'Illegal token ' + arr;
+    let op = tokens.shift(), args = [];
+    while (tokens[0] !== ')') args.push(evaluate(tokens));
+    tokens.shift();
+    return OBJS[op](args);
+  }
+  let tokens = cmd.match(/\-?\d+|[()+\-*/]/g);
+  return evaluate(tokens);
+}
+```
 
 
 
