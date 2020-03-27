@@ -1096,7 +1096,19 @@ function scheme(cmd) {
   return evaluate(tokens);
 }
 ```
-
+#### Basics 06: Reversing and Combining Text 
+```javascript
+function reverse_and_combine_text(str){
+  const arr = str.split(' '), a = [];
+   if(arr.length === 1)
+       return str;
+   for(let i=0; i<arr.length; i=i+2){
+      arr.length % 2 === 0 ? a.push(arr[i].split('').reverse().join('').concat(arr[i+1].split('').reverse().join(''))) 
+      :(i == arr.length-1 ? a.push(arr[i].split('').reverse().join('')): a.push(arr[i].split('').reverse().join('').concat(arr[i+1].split('').reverse().join(''))))
+      };
+   return a.length === 1 ? a.toString() : reverse_and_combine_text(a.join(' '));
+} 
+```
 
 
 
