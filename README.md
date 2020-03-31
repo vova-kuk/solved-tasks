@@ -1109,6 +1109,17 @@ function reverse_and_combine_text(str){
    return a.length === 1 ? a.toString() : reverse_and_combine_text(a.join(' '));
 } 
 ```
+#### Training JS #6: Basic data types--Boolean and conditional statements if..else
+```javascript
+function trueOrFalse(val){
+  if (val)    return 'true';             
+  else     return 'false';
+}
+```
+
+
+
+
 
 
 
