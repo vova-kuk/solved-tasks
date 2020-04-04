@@ -1128,7 +1128,34 @@ const intDiff = (arr, n) => {
   return count;
 }
 ```
+#### Binaries 
+```javascript
+function code(strng) {
+    let n = strng.split(''), res = '';
+    n.forEach(x => {
+      let num = Number(x).toString(2);
+      num = '0'.repeat(num.length -1) + '1' + num;
+      res += num;
+    });
+    return res;
+}
 
+function decode(str) {
+    let arr = [], res = "";
+    for (let i = 0; i < 10; i++)
+      arr.push(code(String(i)));
+    while (str.length !== 0) {
+      for (let i = 0; i < 10; i++) {
+        if (str.startsWith(arr[i])) {
+          res += String(i);
+          str = str.slice(arr[i].length);
+          break;
+        }
+      }
+    }
+   return res;
+} 
+```
 
 
 
