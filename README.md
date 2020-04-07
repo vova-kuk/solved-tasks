@@ -1156,7 +1156,21 @@ function decode(str) {
    return res;
 } 
 ```
-
+#### Bleatrix Trotter (The Counting Sheep)
+```javascript
+function trotter(num) {
+    let arr = [0,1,2,3,4,5,6,7,8,9], curr = 0;
+    if(num <= 0) { return "INSOMNIA"; }
+    while(arr.length) {
+        curr++;
+        let temp = String(num * curr).split("");
+        for(let i = 0; i < temp.length; i++)
+            if(arr.indexOf(+temp[i]) > -1)
+                arr.splice(arr.indexOf(+temp[i]), 1);
+    }
+    return num * curr;
+} 
+```
 
 
 
